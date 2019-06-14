@@ -21,12 +21,12 @@ app.post('/client_txt', (req, ) => {
         scriptPath: 'test.py',
         args: ['--text', text]
     };
-
+    //TODO: Get return val from python script not print val
     python.PythonShell.run('.', options,
         function (err, results) {
         if (err)
             throw err;
-        console.log('results: %j', results); // python return val stored in results
+        console.log(results[0]); // python "print" val stored in results
     });
 
     /******************************/

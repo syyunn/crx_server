@@ -21,11 +21,10 @@ def main():
     args = parser.parse_args()
     summary = summarize_txt(args.text)
 
-    # TODO: Delete following after successfully implemented into ExpressJS
-    print("this is summary: {} \n(original: {})".format(summary,
-                                                        args.text))
+    # TODO: Get return value from python script in express js not print value
+    print(summary)
 
-    return summary
+    # return summary
 
 
 if __name__ == "__main__":
